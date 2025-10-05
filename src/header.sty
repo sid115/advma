@@ -1,0 +1,42 @@
+\ProvidesPackage{header}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\geometry{a4paper, margin=1in}
+
+\newtheorem{problem}{Problem}[section]
+\newtheorem{exercise}[problem]{Exercise}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{corollary}[lemma]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+\newenvironment{solution}
+{\par\noindent\textbf{Solution:}\quad}
+{\hfill$\square$}
+
+\setlist[enumerate]{label=(\alph*), ref=\theproblem(\alph*)}
+\setlist[itemize]{left=0pt}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	pdftitle={Advanced Mathematics Exercises},
+}

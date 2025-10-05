@@ -1,0 +1,2 @@
+torch
+pix2tex[gui]
