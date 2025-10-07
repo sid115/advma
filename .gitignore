@@ -1,3 +1,10 @@
 .direnv
 .venv
 build
+
+*.aux
+*.log
+*.out
+*.dat
+*.script
+*.table

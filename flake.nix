@@ -55,7 +55,9 @@
             ]
             ++ (with pkgs; [
               gnumake
+              gnuplot
               texliveFull
+              texlivePackages.gnuplottex
             ]);
             # FIXME
             # shellHook = ''
