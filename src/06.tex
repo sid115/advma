@@ -1,0 +1,16 @@
+\begin{exercise}
+	Let $ f(x,y) = \frac{1}{\sqrt{x^2 + y^2}} $. Compute $\nabla f$. Then express $f$ and $\nabla f$ in terms of the norm $\norm{v}$, where $ v = (x,y) $.
+\end{exercise}
+
+\begin{solution}
+	$$
+		(\nabla f)(x,y) = -\frac{1}{2(x^2 + y^2)^{3/2}} \left( 2x+y^2, \; x^2+2y \right)
+	$$
+	With $ \norm{v} = \sqrt{x^2 + y^2}:$
+	$$
+		f(v) = \frac{1}{\norm{v}}
+	$$
+	$$
+		(\nabla f)(v) = -\frac{1}{2 \norm{v}^3} \left( 2x+y^2, \; x^2+2y \right)
+	$$
+\end{solution}

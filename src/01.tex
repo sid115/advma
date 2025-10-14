@@ -1,0 +1,40 @@
+\begin{exercise}
+	Let $f$ be the scalar function defined by $f(x,y) = xy$. Sketch the contour lines and the vector field $\nabla f$.
+\end{exercise}
+
+\begin{solution}
+	$$
+		(\nabla f)(x,y) = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right) = (y,x)
+	$$
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}[
+					axis equal,
+					xlabel=$x$,
+					ylabel=$y$,
+					domain=-3:3,
+					y domain=-3:3,
+					view={0}{90},
+					enlargelimits=false,
+					axis on top,
+					colorbar,
+					colormap/viridis,
+				]
+				\addplot3[
+					contour gnuplot={levels={-4,-2,-1,-0.5,0,0.5,1,2,4},labels=false},
+					thick,
+					samples=50,
+				] {x*y};
+				\addplot3[
+					quiver={
+							u={y},
+							v={x},
+							scale arrows=0.15,
+						},
+					-stealth,
+					samples=15,
+				] {0};
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{solution}

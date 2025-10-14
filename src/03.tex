@@ -1,0 +1,38 @@
+\begin{exercise}
+	Compute curl and divergence of the vector field
+	$$
+		F(x,y,z) = (\sin(x)xy, \, ze^{-x}, \, yz).
+	$$
+\end{exercise}
+
+\begin{solution}
+	$$
+		\begin{aligned}
+			\frac{\partial F_x}{\partial y} & = \frac{\partial}{\partial y} (\sin(x) xy) = x \sin(x) \\
+			\frac{\partial F_x}{\partial z} & = \frac{\partial}{\partial z} (\sin(x) xy) = 0         \\
+			\frac{\partial F_y}{\partial x} & = \frac{\partial}{\partial x} (ze^{-x}) = -ze^{-x}     \\
+			\frac{\partial F_y}{\partial z} & = \frac{\partial}{\partial z} (ze^{-x}) = e^{-x}       \\
+			\frac{\partial F_z}{\partial x} & = \frac{\partial}{\partial x} (yz)  = 0                \\
+			\frac{\partial F_z}{\partial y} & = \frac{\partial}{\partial y} (yz)  = z
+		\end{aligned}
+	$$
+	$$
+		\begin{aligned}
+			\text{curl}\, F = \nabla \times F & = \left(
+			\frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z},\;
+			\frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x},\;
+			\frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}
+			\right)                                                                                         \\
+			                                  & = \left( z - e^{-x},\; 0 - 0,\; -ze^{-x} - x\sin(x) \right) \\
+			                                  & = \left( z - e^{-x},\; 0,\; -ze^{-x} - x\sin(x) \right)     \\[1em]
+		\end{aligned}
+	$$
+	$$
+		\begin{aligned}
+			\text{div}\, F = \nabla \cdot F & = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y} + \frac{\partial F_z}{\partial z}                             \\
+			                                & = \frac{\partial}{\partial x}\big(\sin(x)xy\big) + \frac{\partial}{\partial y}\big(ze^{-x}\big) + \frac{\partial}{\partial z}(yz) \\
+			                                & = y\sin(x) + xy\cos(x) + 0 + y                                                                                                    \\
+			                                & = y\sin(x) + xy\cos(x) + y
+		\end{aligned}
+	$$
+\end{solution}
