@@ -3,11 +3,30 @@
 	$$
 		\omega = x^2 \exp(xyz) \, dy \wedge dz
 	$$
-	be a 2-form on $\mathbb{R}^3$. Give the 3-form $d\omega$.
+	be a 2-form on $\R^3$. Give the 3-form $d\omega$.
 
 	\emph{Hint:} $d\omega = f(x,y,z) \, dx \wedge dy \wedge dz$, where $f$ is a scalar function.
 \end{exercise}
 
 \begin{solution}
-	TODO
+	Any smooth 2-form in $\R^3$ can be written as:
+	$$
+		\begin{aligned}
+			\omega & = A(x,y,z) \, dy \wedge dz + B(x,y,z)\, dz \wedge dx + C(x,y,z) \, dx \wedge dy \\
+			       & = x^2 e^{xyz} \, dy \wedge dz
+		\end{aligned}
+	$$
+	$$
+		\implies A(x,y,z) = x^2 e^{xyz} \text{ and } B = C = 0
+	$$
+	$$
+		\begin{aligned}
+			A_x(x,y,z) & = 2x e^{xyz} + x^2 yz e^{xyz} \\
+			           & = x e^{xyz} ( 2 + xyz )
+		\end{aligned}
+	$$
+	So:
+	$$
+		d\omega = \left(x e^{xyz} ( 2 + xyz) \right) \, dx \wedge dy \wedge dz
+	$$
 \end{solution}
