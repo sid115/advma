@@ -6,5 +6,14 @@
 \end{exercise}
 
 \begin{solution}
-	TODO
+	$$
+		\begin{aligned}
+			\int_D \int y^2 e^{-xy} \, dx \, dy & = \int_{0}^{1} \left( \int_{0}^{y} y^2 e^{-xy} dx \right) dy                         \\
+			                                    & = \int_{0}^{1} \left( y^2 \left[ -\frac{1}{y} e^{-xy} \right]_{x=0}^{x=y} \right) dy \\
+			                                    & = \int_{0}^{1} \left( -y e^{-y^2} + y \right) dy                                     \\
+			                                    & = \left[ \tfrac{1}{2} e^{-y^2} + \tfrac{1}{2} y^2 \right]_{0}^{1}                    \\
+			                                    & = \frac{1}{2} \left( e^{-1} - 1 + (1 - 0) \right)                                    \\
+			                                    & = \frac{1}{2e}
+		\end{aligned}
+	$$
 \end{solution}
