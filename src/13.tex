@@ -10,5 +10,15 @@
 \end{exercise}
 
 \begin{solution}
-	TODO
+	$$
+		\begin{aligned}
+			W & = \int_C F \, dr                                                                                                               \\
+			  & = \int_0^{3\pi} F(r(t)) \cdot r'(t) \, dt                                                                                      \\
+			  & = \int_0^{3\pi} \left( -\tfrac{1}{2} \cos(t), -\tfrac{1}{2} \sin(t), \tfrac{1}{4} \right) \cdot ( -\sin(t), \cos(t), 1 ) \, dt \\
+			  & = \int_0^{3\pi} \left( \tfrac{1}{2} \sin(t) \cos(t) - \tfrac{1}{2} \sin(t) \cos(t) + \tfrac{1}{4} \right) \, dt                \\
+			  & = \int_0^{3\pi} \tfrac{1}{4} \, dt                                                                                             \\
+			  & = \left[ \tfrac{1}{4} t \right]_0^{3\pi}                                                                                       \\
+			  & = \frac{3}{4} \pi
+		\end{aligned}
+	$$
 \end{solution}
