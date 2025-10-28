@@ -10,5 +10,17 @@
 \end{exercise}
 
 \begin{solution}
-	TODO
+	The corresponding domain with respect to the polar coordinates $r$ and $\phi$ is
+	$$
+		D^* = [0, 1] \times [0, \pi]
+	$$
+	$$
+		\begin{aligned}
+			\int_D \int (x^2 + y^2)^{10} \, dx \, dy & = \int_0^1 \int_0^\pi (r^2 \cos^2 \phi + r^2 \sin^2 \phi)^{10} r \, d\phi \, dr \\
+			                                         & = \int_0^1 \int_0^\pi (r^2 ( \cos^2 \phi + \sin^2 \phi ))^{10} r \, d\phi \, dr \\
+			                                         & = \int_0^1 \int_0^\pi r^{21} \, d\phi \, dr                                     \\
+			                                         & = \int_0^1 \left( r^{21} \left[ \phi \right]_{\phi=0}^{\phi=\pi} \right) dr     \\
+			                                         & =\pi \left[ \frac{1}{22} r^{22} \right]_{r=0}^{r=1} = \frac{\pi}{22}
+		\end{aligned}
+	$$
 \end{solution}
