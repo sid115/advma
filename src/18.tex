@@ -3,5 +3,42 @@
 \end{exercise}
 
 \begin{solution}
-	TODO
+	Transform $(x, y, z)$ to cylindrical coordinates $(r, \phi, z)$:
+	$$
+		\begin{cases}
+			x = r \cos\phi \\
+			y = r \sin\phi \\
+			z = z
+		\end{cases}
+	$$
+	$$
+		J = \frac{\partial(x, y, z)}{\partial(r, \phi, z)} =
+		\begin{bmatrix}
+			\cos\phi & -r \sin\phi           & 0 \\
+			\sin\phi & \phantom{-}r \cos\phi & 0 \\
+			0        & 0                     & 1
+		\end{bmatrix}
+	$$
+	$$
+		\det(J) =
+		\begin{vmatrix}
+			\cos\phi & -r \sin\phi           \\
+			\sin\phi & \phantom{-}r \cos\phi
+		\end{vmatrix}
+		\cdot 1
+		= r
+	$$
+	$$
+		\implies dx \wedge dy \wedge dz = r \, dr \wedge d\phi \wedge dz
+	$$
+	Move the cylinder in space so that its axis aligns with the $z$-axis from $z=0$ to $z=4$:
+	$$
+		\begin{aligned}
+			V & = \int_0^2 \int_0^{2\pi} \int_0^4 r \, dz \, d\phi \, dr \\
+			  & = 4 \int_0^2 \int_0^{2\pi} r \, d\phi \, dr              \\
+			  & = 8\pi \int_0^2 r \, dr                                  \\
+			  & = 8\pi \left[ \frac{1}{2} r^2 \right]_0^2                \\
+			  & = 16\pi
+		\end{aligned}
+	$$
 \end{solution}
