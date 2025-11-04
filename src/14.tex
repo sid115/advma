@@ -14,6 +14,7 @@
 \begin{solution}
 	\begin{enumerate}
 		\item
+		      Let $r(t)$ go from $(2,0)$ to $(0,0)$ as $t$ goes from $0$ to $\pi$:
 		      $$
 			      \begin{aligned}
 				      C: r(t) & = (x(t),y(t)), \; t \in [0, \pi] \\
@@ -22,30 +23,25 @@
 		      $$
 		      $$
 			      \begin{aligned}
-				      \int_C F \, dr & = \int_{0}^{\pi} F(r(t)) \cdot r'(t) \, dt                                                      \\
-				                     & = \int_{0}^{\pi} (1 + \sin^3 t, 1 + 3 (1 + \cos t) \sin^2 t) \cdot (-\sin t, \cos t) \, dt      \\
-				                     & = \int_{0}^{\pi} ( -\sin t - \sin^4 t + \cos t + 3 \sin^2 t \cos t + 3 \sin^2 t \cos^2 t) \, dt
+				      \int_C F \, dr & = - \int_{0}^{\pi} F(r(t)) \cdot r'(t) \, dt                                                      \\
+				                     & = - \int_{0}^{\pi} (1 + \sin^3 t, 1 + 3 (1 + \cos t) \sin^2 t) \cdot (-\sin t, \cos t) \, dt      \\
+				                     & = - \int_{0}^{\pi} ( -\sin t - \sin^4 t + \cos t + 3 \sin^2 t \cos t + 3 \sin^2 t \cos^2 t) \, dt
 			      \end{aligned}
 		      $$
 
 		\item
-		      $$
-			      \phi(x,y) = \int (y^3 + 1) \, dx = xy^3 + x + h(y)
-		      $$
+		      Let $r(t) = (tx, ty), \, t \in [0,1]$:
 		      $$
 			      \begin{aligned}
-				               & \frac{\partial \phi}{\partial y} = 3xy^2 + h'(y) \overset{!}{=} 3xy^2 + 1 \\
-				      \iff     & h'(y) = 1                                                                 \\
-				      \iff     & h(y) = y + C \quad                                                        \\
-				      \text{WLOG, let } C = 0:                                                             \\
-				      \implies & \phi(x,y) = xy^3 + x + y
+				      \phi(x,y) & = \int_{0}^{1} F(r(t)) \cdot r'(t) \, dt                                \\
+				                & = \int_{0}^{1} (t^3 y^3 + 1, \, 3t^3 x y^2 + 1) \cdot (x, \, y) \, dt   \\
+				                & = \int_{0}^{1} (t^3 y^3 x + x + 3t^3 x y^3 + y) \, dt                   \\
+				                & = \left[ \tfrac{1}{4} t^4 (y^3 x + 3 x y^3) + t (x + y) \right]_{0}^{1} \\
+				                & = x y^3 + x + y
 			      \end{aligned}
 		      $$
 		      $$
-			      \begin{aligned}
-				      \int_C F \, dr & = \phi(2, 0) - \phi(0, 0) \\
-				                     & = 0+2+0 - (0+0+0) = 2     \\
-			      \end{aligned}
+			      \nabla (x y^3 + x + y) = (y^3 + 1, \, 3xy^2 + 1) = F(x,y) \implies \phi \text{ is a potential of } F
 		      $$
 	\end{enumerate}
 \end{solution}
